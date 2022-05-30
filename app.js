@@ -37,9 +37,9 @@ rock.addEventListener("click", () =>{
         }
         pscore.textContent=playerScore;
     }else if(winner==="Computer"){
-        message.innerHTML="<h3>Computer Wins! Press Reset to start over!"
         computerScore++;
-        if(computerScore===winningScore){
+        if(computerScore===winningScore){        
+            message.innerHTML="<h3>Computer Wins! Press Reset to start over!"
             isGameOver=true;
             rock.disabled="true";
             paper.disabled="true";
