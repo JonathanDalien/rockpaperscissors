@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .button{
+            color: red;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+    </style>
 </head>
 <body>
+    <div class="score">
+        <div class="playerscore">
+            <h2 class="pscore">0</h2>
+            <h3>Player</h3>
+        </div>
+        <div class="computerscore">
+            <h3 class="cscore">0</h3>
+            <h3>Computer</h3>
+        </div>
+    </div>
+    <div class="message">
+       <h3>Press a Button to play!</h3>
+    </div>
+    <div class="buttons">
+        <button class="button btnrock">Rock</button>
+        <button class="button btnpaper">Paper</button>
+        <button class="button btnscissor">Scissor</button>
+        <button class="button reset">Reset</button>
+    </div>
     <script src="./app.js"></script>
+
+
 </body>
 </html>
