@@ -48,7 +48,6 @@ rock.addEventListener("click", () =>{
         cscore.textContent=computerScore;
     }
     }
-  
 
 })
 const paper= document.querySelector(".btnpaper");
@@ -106,17 +105,6 @@ scissor.addEventListener("click", () =>{
   }
 })
 
-
-
-function playerPlay(){
-    let userInput= prompt("Rock, Paper Scissors?");
-    let capitalized= userInput.trim().charAt(0).toUpperCase()+userInput.toLocaleLowerCase().slice(1);
-    //  while(!(capitalized=="Rock"||userInput=="Paper"||userInput=="Scissors")){
-    //  userInput= prompt("Rock, Paper Scissors?");
-    //  }
-    return capitalized;
-}
-
 resetBtn.addEventListener("click", (e)=>{
     isGameOver=false;
     playerScore=0;
@@ -128,8 +116,6 @@ resetBtn.addEventListener("click", (e)=>{
     paper.disabled=false;
     scissor.disabled=false;
 })
-
-
 
 function playRound(playerSelection, computerSelection){ 
     let msg="";
@@ -161,27 +147,3 @@ function playRound(playerSelection, computerSelection){
 }
 
 
-function game(){
-
-   let win="";
-
-
-    let currentWinner=playRound(playerPlay(), computerPlay());
-
-    if(currentWinner==="Player"){
-        playerScore++;
-
-    }else if(currentWinner==="Computer"){
-        computerScore++;
-    } if(playerScore>computerScore){
-        win="Player wins"
-    }else if(playerScore<computerScore){
-        win="Computer wins"
-    }else{
-        win="Its a draw, nobody wins"
-    }
-    console.log("Player has a score of "+playerScore+" and Computer has a score of "+computerScore);
-    console.log(win);
-   }
-
-   
